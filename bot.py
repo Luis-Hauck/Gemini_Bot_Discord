@@ -1,12 +1,10 @@
 import discord
 import google.generativeai as genai
-from dotenv import load_dotenv
 from discord.ext import commands
-import os
 
-load_dotenv()
-DISCORD_BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
+DISCORD_BOT_TOKEN = "SEU_DISCORD_BOT_TOKEN"
+GEMINI_API_KEY = "SUA_GEMINI_API_KEY"
 
 intents = discord.Intents.default()
 intents.messages = True
