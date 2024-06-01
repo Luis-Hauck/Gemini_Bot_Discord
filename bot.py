@@ -52,10 +52,9 @@ async def on_message(message):
         return
 
     async with message.channel.typing():
-        # Check if the bot is mentioned
+
         if message.mentions and bot.user in message.mentions:
-            # Extract the message content without the mention
-            content = message.content.split(maxsplit=1)[1].strip()  # Remove "@gemini "
+            content = message.content.split(maxsplit=1)[1].strip()
             resposta = ask_gemini(content)
             await message.reply(resposta)
 
